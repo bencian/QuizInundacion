@@ -6,6 +6,8 @@
   <%= @answer.reason %>
 </div>
 
+<%= "Puntaje: #{@game.score}" %>
+
 <div>
   <%= link_to 'Proxima pregunta', next_round_path(game: @game, offset: @offset) %>
 </div>
