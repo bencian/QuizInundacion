@@ -4,6 +4,7 @@ class AnswersController < ApplicationController
     @answer = Answer.find(params[:id])
     @offset = params[:offset]
     @game   = Game.find(params[:game])
+    @game.increment!(:score) if @answer.value
 
     return unless @game.questions.size == @offset.to_i
 
