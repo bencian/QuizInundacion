@@ -15,4 +15,4 @@ RUN rails db:create && rails db:migrate && rails db:seed
 
 EXPOSE 3000
 
-CMD rails s
+CMD rails s -b 0.0.0.0
