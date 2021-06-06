@@ -1,14 +1,27 @@
-<%= game.questions[offset] %>
+<div>
+  <%= game.questions[offset] %>
+</div>
 
 <% first_answer = game.questions[offset].answers.first%>
 <% second_answer = game.questions[offset].answers.second%>
 <% third_answer = game.questions[offset].answers.third%>
 <% fourth_answer = game.questions[offset].answers.fourth%>
 
-
-<%= link_to first_answer, answer_path(first_answer, offset: offset + 1, game: game.id)%>
-<%= link_to second_answer, answer_path(second_answer, offset: offset + 1, game: game.id)%>
-<%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id)%>
-<%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id)%>
-
+<div>
+  <div>
+    <%= link_to first_answer, answer_path(first_answer, offset: offset + 1, game: game.id)%>
+  </div>
+  <div>
+    <%= link_to second_answer, answer_path(second_answer, offset: offset + 1, game: game.id)%>
+  </div>
+  <div>
+    <%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id)%>
+  </div>
+  <div>
+    <%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id)%>
+  </div>
+</div>
+<div>
+  <%= link_to 'Volver al menu principal', '/'%>
+</div>
 

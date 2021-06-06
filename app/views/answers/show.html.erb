@@ -1,4 +1,15 @@
-<%= @answer.value %>
-<%= @answer.reason %>
+<div>
+  <%= @answer.value_to_s %>
+</div>
 
-<%= link_to 'Proxima pregunta', next_round_path(game: @game, offset: @offset) %>
+<div>
+  <%= @answer.reason %>
+</div>
+
+<div>
+  <%= link_to 'Proxima pregunta', next_round_path(game: @game, offset: @offset) %>
+</div>
+
+<div>
+  <%= link_to 'Volver al menu principal', '/'%>
+</div>
