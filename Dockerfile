@@ -1,8 +1,9 @@
 FROM ruby:2.6.3
 
-RUN bundle 
+COPY Gemfile Gemfile.lock ./ 
+RUN gem install bundler && bundle install
 
-COPY . /
+COPY . ./
 
 RUN rails db:create && rails db:migrate && rails db:seed
 
