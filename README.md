@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+RUN DOCKER: sudo docker run -it -p 3000:3000 --rm quiz
