@@ -1,9 +1,29 @@
-<h1>Bienvenidos!</h1>
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+      <title>Quiz Inundación</title>
+   </head>
+<body>
+  <div class="header-nav">
+    <header>
+        <nav>
+          <div>
+              <h1 class="app-name">QUIZ INUNDACIÓN</h1>
+          </div>
+        </nav>
+    </header>
+  </div>
 
-<div>
-  <%= link_to 'Jugar', '/game' %>
-</div>
-
-<div>
-  <%= link_to 'Configuración', '/configuration' %>
-</div>
+  <div class="body-div">
+    <div class="tittle-div">
+      <h2 class="tittle">Bienvenidos</h2>
+    </div>
+    <div class="buttons">
+      <button class="button button1"> %= link_to 'Jugar', '/game' % </button>
+      <button class="button button2"> %= link_to 'Configuración', '/configuration' % </button>
+    </div>
+  </div>
+</body>
