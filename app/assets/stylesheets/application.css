@@ -62,7 +62,7 @@ body{
     margin-top: 50px;
 }
 
-.button1{
+.button-config{
     margin-top: 200px;
     text-align: center;
     width: 800px;
@@ -77,6 +77,96 @@ body{
     overflow: hidden;
 }
 
+.button-play{
+    width: 800px;
+    height: 90px;
+    background: rgba(244,160,35,1);
+    top: 736px;
+    left: 318px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.tittle-pregunta{
+    font-family: Rancho;
+    font-size: 40px;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.button-options {
+    color: white;
+    text-align: center;
+    font-family: Rancho;
+    font-size: 30px;
+    margin-top: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button-config{
+    margin-top: 100px;
+    text-align: center;
+    width: 800px;
+    height: 90px;
+    background: rgba(72,241,78,1);
+    top: 584px;
+    left: 318px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.button-play{
+    width: 800px;
+    height: 90px;
+    background: rgba(244,160,35,1);
+    top: 736px;
+    left: 318px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.text-pregunta{
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    font-family: Rancho;
+}
+
+.button1{
+    width: 800px;
+    height: 90px;
+    background: rgba(244,160,35,1);
+    top: 736px;
+    left: 318px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.button1:hover {
+    background-color: rgb(192, 131, 38);
+    color: white;
+}
+
 .button2{
     width: 800px;
     height: 90px;
@@ -88,4 +178,45 @@ body{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     overflow: hidden;
+}
+
+.button2:hover {
+    background-color: rgb(192, 131, 38);
+    color: white;
+}
+
+.button3{
+    width: 800px;
+    height: 90px;
+    background: rgba(244,160,35,1);
+    top: 736px;
+    left: 318px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.button3:hover {
+    background-color: rgb(192, 131, 38);
+    color: white;
+}
+
+.button4{
+    width: 800px;
+    height: 90px;
+    background: rgba(244,160,35,1);
+    top: 736px;
+    left: 318px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+}
+
+.button4:hover {
+    background-color: rgb(192, 131, 38);
+    color: white;
 }
