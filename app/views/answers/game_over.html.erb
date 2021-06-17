@@ -1,16 +1,22 @@
-<div>
-  <%= @answer.value_to_s %>
-</div>
-<div>
-  <%= @answer.reason %>
+<div class="body-div">
+  <div class="title-div">
+    <h2 class="title">Fin del juego!</h2>
+  </div>
+  <div>
+    <%= @answer.value_to_s %>
+  </div>
+  <div>
+    <%= @answer.reason %>
+  </div>
+  <div>
+    <%= "Puntaje: #{@game.score}" %>
+  </div>
+  <div class="back-main">
+    <button class="back-main-button"> %= link_to 'Volver al menu principal', '/'% </button>
+  </div>
 </div>
 
-<h1> Fin del juego! </h1>
 
-<div>
-  <%= "Puntaje: #{@game.score}" %>
-</div>
 
-<div>
-  <%= link_to 'Volver al menu principal', '/'%>
-</div>
+
+

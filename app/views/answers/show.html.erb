@@ -1,17 +1,18 @@
-<div>
-  <%= @answer.value_to_s %>
+<div class="body-div">
+  <div class="title-div">
+    <h2 class="title"> %= @answer.value_to_s % </h2>
+  </div>
+  <div>
+    <%= @answer.reason %>
+    <%= "Puntaje: #{@game.score}" %>
+  </div>
+  <div class="buttons">
+    <%= link_to 'Proxima pregunta', next_round_path(game: @game, offset: @offset), class: "button button-config" %>
+  </div>
+  <div class="back-main">
+        <button class="back-main-button"> %= link_to 'Volver al menu principal', '/'% </button>
+    </div>
 </div>
 
-<div>
-  <%= @answer.reason %>
-</div>
 
-<%= "Puntaje: #{@game.score}" %>
 
-<div>
-  <%= link_to 'Proxima pregunta', next_round_path(game: @game, offset: @offset) %>
-</div>
-
-<div>
-  <%= link_to 'Volver al menu principal', '/'%>
-</div>
