@@ -16,9 +16,10 @@
       <%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id), class: "button-options button"%> 
       <%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id), class: "button-options button"%>
     </div>
+    <div class="back-main">
+        <button class="back-main-button"> %= link_to 'Volver al menu principal', '/'% </button>
+    </div>
 </div>
 
-<div>
-  <%= link_to 'Volver al menu principal', '/'%>
-</div>
+
 
