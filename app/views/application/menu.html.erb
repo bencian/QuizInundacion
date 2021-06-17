@@ -1,23 +1,9 @@
-<body>
-*=require application.css
-
-  <div class="header-nav">
-    <header>
-        <nav>
-          <div>
-              <h1 class="app-name">QUIZ INUNDACIÓN</h1>
-          </div>
-        </nav>
-    </header>
+<div class="body-div">
+  <div class="title-div">
+    <h2 class="title">Bienvenidos</h2>
   </div>
-
-  <div class="body-div">
-    <div class="tittle-div">
-      <h2 class="tittle">Bienvenidos</h2>
-    </div>
-    <div class="buttons">
-      <button class="button button-play"> %= link_to 'Jugar', '/game' % </button>
-      <button class="button button-config"> %= link_to 'Configuración', '/configuration' % </button>
-    </div>
+  <div class="buttons">
+    <%= link_to 'Jugar', '/game', class: "button button-play"%> 
+    <%= link_to 'Configuración', '/configuration', class: "button button-config" %>
   </div>
-</body>
+</div>

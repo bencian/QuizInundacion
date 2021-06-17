@@ -1,55 +1,23 @@
-<div class="header-nav">
-    <header>
-      <nav>
-          <div>
-            <h1 class="app-name">QUIZ INUNDACIÓN</h1>
-          </div>
-      </nav>
-    </header>
-</div>
-
-<div class="body-div">
-    <div class="tittle-div">
-      <h2 class="tittle-pregunta">Pregunta:</h2>
-    </div>
-    <div>
-      <p class="text-pregunta"> %= game.questions[offset] % </p>
-    </div>
-    <div class="buttons">
-      <button class="button-options button1"> % first_answer = game.questions[offset].answers.first% </button>
-      <button class="button-options button2"> % second_answer = game.questions[offset].answers.second% </button>
-      <button class="button-options button3"> % third_answer = game.questions[offset].answers.third% </button>
-      <button class="button-options button4"> % fourth_answer = game.questions[offset].answers.fourth% </button>
-    </div>
-</div>
-
-
-
-
-
-<div>
-  <%= game.questions[offset] %>
-</div>
-
 <% first_answer = game.questions[offset].answers.first%>
 <% second_answer = game.questions[offset].answers.second%>
 <% third_answer = game.questions[offset].answers.third%>
 <% fourth_answer = game.questions[offset].answers.fourth%>
 
-<div>
-  <div>
-    <%= link_to first_answer, answer_path(first_answer, offset: offset + 1, game: game.id)%>
-  </div>
-  <div>
-    <%= link_to second_answer, answer_path(second_answer, offset: offset + 1, game: game.id)%>
-  </div>
-  <div>
-    <%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id)%>
-  </div>
-  <div>
-    <%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id)%>
-  </div>
+<div class="body-div">
+    <div class="title-div">
+      <h2 class="title-pregunta">Pregunta:</h2>
+    </div>
+    <div>
+      <p class="text-pregunta"> <%= game.questions[offset] %> </p>
+    </div>
+    <div class="buttons">
+      <%= link_to first_answer, answer_path(first_answer, offset: offset + 1, game: game.id), class: "button-options button"%> 
+      <%= link_to second_answer, answer_path(second_answer, offset: offset + 1, game: game.id), class: "button-options button"%> 
+      <%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id), class: "button-options button"%> 
+      <%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id), class: "button-options button"%>
+    </div>
 </div>
+
 <div>
   <%= link_to 'Volver al menu principal', '/'%>
 </div>
