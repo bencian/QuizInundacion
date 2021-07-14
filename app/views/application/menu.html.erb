@@ -2,6 +2,18 @@
   <div class="title-div">
     <h2 class="title-pregunta">Bienvenidos</h2>
   </div>
+  <p class="descripcion"> 
+    Este es un juego de preguntas y respuestas sobre como actuar frente a una inundación.
+  </p>
+  <p class="title-pregunta"> Instrucciones: </p>
+  <div class="instrucciones">
+    <p class="descripcion">
+      En cada pregunta aparecerán 4 posibles respuestas, las cuales son todas incorrectas salvo una. 
+      Debes elegir una respuesta, y se te informará si era correcta o no. 
+      Las respuestas correctas suman 1 punto, mientras que las incorrectas no suman nada.
+      Al cabo de 5 preguntas, se termina la partida.
+    </p>
+  </div>
   <div class="buttons">
     <%= link_to 'Jugar', '/game', class: "button button-play"%> 
     <%= link_to 'Configuración', '/configuration', class: "button button-config" %>

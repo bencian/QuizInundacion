@@ -30,7 +30,7 @@ body{
 .title-pregunta{
     font-family: Rancho;
     font-size: 40px;
-    text-align: left;
+    text-align: center;
     margin-top: 25px;
     margin-left: 25px;
 }
@@ -178,7 +178,8 @@ body{
 }
 
 .back-main{
-    margin-left: 25px;
+    margin-top: 15px;
+    text-align: center;
 }
 
 .back-main-button{
@@ -192,4 +193,18 @@ body{
     border-bottom-right-radius: 20px;
     overflow: hidden;
     background: rgb(204, 204, 204);
+}
+
+.descripcion{
+    font-family: Rancho;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.instrucciones{
+    padding-left: 400px;
+    padding-right: 400px;
+    justify-content: center;
 }

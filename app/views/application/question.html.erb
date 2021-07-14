@@ -1,7 +1,8 @@
-<% first_answer = game.questions[offset].answers.first%>
-<% second_answer = game.questions[offset].answers.second%>
-<% third_answer = game.questions[offset].answers.third%>
-<% fourth_answer = game.questions[offset].answers.fourth%>
+<% answers = game.questions[offset].answers.shuffle %>
+<% first_answer = answers.first%>
+<% second_answer = answers.second%>
+<% third_answer = answers.third%>
+<% fourth_answer = answers.fourth%>
 
 <div class="body-div">
     <div class="title-div">
@@ -19,7 +20,7 @@
 
     <p class="text-pregunta"> Puntaje: <%= game.score%> </p>
     <div class="back-main">
-      <%= link_to 'Abandonar partida', '/', class: "button back-main-button"%>
+      <%= link_to 'Abandonar partida', '/', class: "button back-main-button", data: {confirm: 'Estás seguro?'}%>
     </div>
 </div>
 
