@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do |i|
-  question = Question.create(question: "pregunta #{i}")
-  Answer.create(question: question, answer: "#{i} - respuesta 1", value: true, reason: "#{i} - razon 1")
-  Answer.create(question: question, answer: "#{i} - respuesta 2", value: false, reason: "#{i} - razon 2")
-  Answer.create(question: question, answer: "#{i} - respuesta 3", value: false, reason: "#{i} - razon 3")
-  Answer.create(question: question, answer: "#{i} - respuesta 4", value: false, reason: "#{i} - razon 4")
-end
+question = Question.create(question: 'Qué cosas agarrar en caso de una inundación?')
+Answer.create(question: question, answer: 'Un kit de primeros auxilios', value: true, reason: 'Es una buena idea estar preparado ante emergencias')
+Answer.create(question: question, answer: 'Un juguete', value: false, reason: 'En casos de emergencia, es mejor tener solo lo indispensable')
+Answer.create(question: question, answer: 'Una pelota', value: false, reason: 'En casos de emergencia, es mejor tener solo lo indispensable')
+Answer.create(question: question, answer: 'El control remoto', value: false, reason: 'En casos de emergencia, es mejor tener solo lo indispensable')
+
+question = Question.create(question: '')
+Answer.create(question: question, answer: '', value: true, reason: '')
+Answer.create(question: question, answer: '', value: false, reason: '')
+Answer.create(question: question, answer: '', value: false, reason: '')
+Answer.create(question: question, answer: '', value: false, reason: '')
