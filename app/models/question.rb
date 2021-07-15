@@ -5,4 +5,8 @@ class Question < ApplicationRecord
   def to_s
     question
   end
+
+  def correct_answer
+    answers.where(value: true).first
+  end
 end

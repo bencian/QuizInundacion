@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-question = Question.create(question: '¿Por qué se produce una inundación?    ', reason: 'Una inundación es una crecida repentina de agua en una región dada, debido a cuestiones climáticas como lluvias, temporales, huracanes, etc')
+question = Question.create(question: '¿Por qué se produce una inundación?', reason: 'Una inundación es una crecida repentina de agua en una región dada, debido a cuestiones climáticas como lluvias, temporales, huracanes, etc')
 Answer.create(question: question, answer: 'Por cuestiones climáticas', value: true)
 Answer.create(question: question, answer: 'Porque comí demasiado helado', value: false)
 Answer.create(question: question, answer: 'Porque no hice mi tarea', value: false)
@@ -106,7 +106,7 @@ question = Question.create(question: '¿Cuál es el calzado recomendado para cam
 Answer.create(question: question, answer: 'Botas de goma', value: true)
 Answer.create(question: question, answer: 'Ojotas', value: false)
 Answer.create(question: question, answer: 'Pantuflas', value: false)
-Answer.create(question: question, answer: 'Ninguna calzado', value: false)
+Answer.create(question: question, answer: 'Ningun calzado', value: false)
 
 question = Question.create(question: '¿Qué debo hacer si estoy lastimado en una inundación?', reason: 'Es muy importante que si hay alguien lastimado en una inundación, se consiga un botiquín de primeros auxilios, se evite el contacto con el agua sucia y no tocar la herida con manos sucias')
 Answer.create(question: question, answer: 'Todas son correctas', value: true)

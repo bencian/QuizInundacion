@@ -208,3 +208,11 @@ body{
     padding-right: 400px;
     justify-content: center;
 }
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}

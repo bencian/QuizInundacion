@@ -1,15 +1,22 @@
 <div class="body-div">
   <div class="title-div">
-    <h2 class="title">Fin del juego!</h2>
+    <h2 class="title-pregunta">Fin del juego!</h2>
   </div>
   <div>
-    <%= @answer.value_to_s %>
+    <p class="text-pregunta <%= @answer.color%>"><%= @answer.value_to_s %></p>
   </div>
   <div>
-    <%= @answer.reason %>
+    <% if !@answer.value%>
+      <p class="text-pregunta">
+        La respuesta correcta era: <%= @answer.question.correct_answer.to_s%>
+      </p>
+    <% end %>
+    <p class="text-pregunta">
+      <%= @answer.question.reason %>
+    </p>
   </div>
   <div>
-    <%= "Puntaje: #{@game.score}" %>
+    <p class="text-pregunta"><%= "Puntaje: #{@game.score}" %></p>
   </div>
   <div class="back-main">
     <%= link_to 'Volver al menu principal', '/', class: "button back-main-button"%>

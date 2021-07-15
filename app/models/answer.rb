@@ -8,4 +8,12 @@ class Answer < ApplicationRecord
   def to_s
     answer
   end
+
+  def color
+    if value
+      'green'
+    else
+      'red'
+    end
+  end
 end
