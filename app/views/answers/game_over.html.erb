@@ -3,27 +3,31 @@
     <h2 class="title-pregunta">Fin del juego!</h2>
   </div>
   <div>
-    <p class="text-pregunta <%= @answer.color%>"><%= @answer.value_to_s %></p>
+    <p class="text-pregunta <%= @answer.color%>"><%= @answer.value_to_s %>
   </div>
   <div>
     <% if !@answer.value%>
       <p class="text-pregunta">
-        La respuesta correcta era: <%= @answer.question.correct_answer.to_s%>
+        La respuesta correcta era: <%= @answer.question.correct_answer.to_s%> <%= link_to audio_icon, play_audio_path(text: @answer.question.correct_answer.to_s), remote: true %>
       </p>
     <% end %>
     <p class="text-pregunta">
-      <%= @answer.question.reason %>
+      <%= @answer.question.reason %> <%= link_to audio_icon, play_audio_path(text: @answer.question.reason), remote: true %>
     </p>
   </div>
   <div>
     <p class="text-pregunta"><%= "Puntaje: #{@game.score}" %></p>
   </div>
   <div class="back-main">
-    <%= link_to 'Volver al menu principal', '/', class: "button back-main-button"%>
+    <%= form_with url: "/game_over", method: :get, local: true do |form| %>
+      <div>
+        <%= form.label :name, 'Ingrese su nombre: ', class: "text-pregunta" %>
+        <%= form.text_field :name, class: "text-pregunta" %>
+        <%= form.hidden_field :score, value: @game.score%>
+      </div>
+      <div>
+        <%= form.submit 'Volver al menu principal', class: "button back-main-button" %>
+      </div>
+    <% end %>
   </div>
 </div>
-
-
-
-
-

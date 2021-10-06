@@ -9,4 +9,9 @@ class GameController < ApplicationController
 
     render 'question', locals: { game: game, offset: offset.to_i }
   end
+
+  def game_over
+    Score.create(name: params[:name], score: params[:score]) unless params[:name].blank?
+    redirect_to '/'
+  end
 end

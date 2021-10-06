@@ -9,14 +9,29 @@
       <h2 class="title-pregunta">Pregunta:</h2>
     </div>
     <div>
-      <p class="text-pregunta"> <%= game.questions[offset] %> </p>
+      <p class="text-pregunta"> <%= game.questions[offset] %> <%= link_to audio_icon, play_audio_path(text: game.questions[offset].to_s), remote: true %>  </p>
+      
     </div>
     <div class="buttons">
-      <%= link_to first_answer, answer_path(first_answer, offset: offset + 1, game: game.id), class: "button-options button1 button"%> 
-      <%= link_to second_answer, answer_path(second_answer, offset: offset + 1, game: game.id), class: "button-options button2 button"%> 
-      <%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id), class: "button-options button3 button"%> 
-      <%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id), class: "button-options button4 button"%>
+      <div class='answer'>
+        <%= link_to first_answer, answer_path(first_answer, offset: offset + 1, game: game.id), class: "button-options button1 button"%> 
+        <%= link_to audio_icon, play_audio_path(text: first_answer.to_s), remote: true %>      
+      </div>
+      <div class='answer'>
+        <%= link_to second_answer, answer_path(second_answer, offset: offset + 1, game: game.id), class: "button-options button2 button"%> 
+        <%= link_to audio_icon, play_audio_path(text: second_answer.to_s), remote: true %> 
+      </div>
+      <div class='answer'>
+        <%= link_to third_answer, answer_path(third_answer, offset: offset + 1, game: game.id), class: "button-options button3 button"%> 
+        <%= link_to audio_icon, play_audio_path(text: third_answer.to_s), remote: true %> 
+      </div>
+      <div class='answer'>
+        <%= link_to fourth_answer, answer_path(fourth_answer, offset: offset + 1, game: game.id), class: "button-options button4 button"%>
+        <%= link_to audio_icon, play_audio_path(text: fourth_answer.to_s), remote: true %> 
+      </div>
     </div>
+
+    
 
     <p class="text-pregunta"> Puntaje: <%= game.score%> </p>
     <div class="back-main">

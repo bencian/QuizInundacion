@@ -5,11 +5,11 @@
   <div>
     <% if !@answer.value%>
       <p class="text-pregunta">
-        La respuesta correcta era: <%= @answer.question.correct_answer.to_s%>
+        La respuesta correcta era: <%= @answer.question.correct_answer.to_s%> <%= link_to audio_icon, play_audio_path(text: @answer.question.correct_answer.to_s), remote: true %>
       </p>
     <% end %>
     <p class="text-pregunta">
-      <%= @answer.question.reason %>
+      <%= @answer.question.reason %> <%= link_to audio_icon, play_audio_path(text: @answer.question.reason), remote: true %>
     </p>
   </div>
   <div>

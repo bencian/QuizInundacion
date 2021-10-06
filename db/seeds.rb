@@ -76,7 +76,7 @@ question = Question.create(question: '¿Qué hacer con las mascotas en caso de i
 Answer.create(question: question, answer: 'Llevarlas con nosotros a un lugar alto', value: true)
 Answer.create(question: question, answer: 'Dejarlas en el patio', value: false)
 Answer.create(question: question, answer: 'Dejarlas en la calle', value: false)
-Answer.create(question: question, answer: 'Dejarlas en la calle', value: false)
+Answer.create(question: question, answer: 'Ignorarlas', value: false)
 
 question = Question.create(question: '¿A quién debo llamar primero en caso de una inundación?', reason: 'Ante un evento como una inundación siempre se recomienda llamar a emergencias para poder ser asistidos cuanto antes')
 Answer.create(question: question, answer: 'Emergencias', value: true)
